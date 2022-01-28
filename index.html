@@ -98,7 +98,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container">
         <p>Are your eyes watery or itchy?</p> 
 	<!--Question 1 content-->
-	<a href="#two" onclick="AllergyAdd();”class="w3-btn w3-black"> YES</a>	
+	<a href onclick="AllergyAdd(#two);”class="w3-btn w3-black"> YES</a>	
 	<a href="#two" onclick="ColdAdd();”class="w3-btn w3-black"> NO</a>
 	<!--If the button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
 	Regardless of which is clicked, the website will go to page two. -->	
@@ -127,7 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 		<!--Question 3 content-->
-	<a href="#four" onclick="ColdAdd();”class="w3-btn w3-black"> YES</a>	
+	<a href="#four" onclick="ColdAdd();”class="w3-btn w3-black"> YES</a>
 	<a href="#four" onclick="AllergyAdd();”class="w3-btn w3-black"> NO</a>
 	<!--Buttons for page three. If the button yes is clicked then cold will be counted in the total, but if no is clicked, then allergy it added to the final total. 
 	Regardless of which is clicked, the website will go to page four.-->
