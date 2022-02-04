@@ -52,7 +52,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function Results(){
 		var allergyPercent = (allergy_count/4)*100;
 		var coldPercent = (cold_count/4)*100;
-		 "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+		resultText.innerTML "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 		
   </script>
 
@@ -165,19 +165,53 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Are you having a hard time breathing?</p>
+		<!--Question 5 content-->
+		
+	<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> YES</a>	
+	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black"> NO</a>
+		
+		
+	<!--Buttons for page five. If the button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
+	Regardless of which is clicked, the website will go to next page.-->
+	</div>
+	
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<p>Do you feel nauseous?</p>
+		<!--Question 6 content-->
+		
+	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> NO</a>	
+	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black"> YES</a>
+		
+		
+	<!--Buttons for page six. If the button no is clicked then allergy will be counted in the total, but if yes is clicked, then cold it added to the final total. 
+	Regardless of which is clicked, the website will go to next page.-->
+	</div>
+	
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
 
 			
-	<a href="#six"  onclick="();" class="w3-btn w3-black"> Click here for results...</a>
+	<a href="#eight"  onclick="();" class="w3-btn w3-black"> Click here for results...</a>
 		
 		
-	<!--Buttons for page five.-->
+	<!--Buttons for page seven.-->
 	</div>
 
-<div class="page" id="six">
+<div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your Results</h1>
 	</div>
