@@ -52,7 +52,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function Results(){
 		var allergyPercent = (allergy_count/4)*100;
 		var coldPercent = (cold_count/4)*100;
-		resultText.innerTML "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
+		var resultText = document.getElementById("Results");
+		resultText.innerHTML= "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;
 		
   </script>
 
@@ -188,9 +189,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you feel nauseous?</p>
 		<!--Question 6 content-->
-		
-	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> NO</a>	
+			
 	<a href="#seven"  onclick="coldAdd();" class="w3-btn w3-black"> YES</a>
+	<a href="#seven"  onclick="allergyAdd();" class="w3-btn w3-black"> NO</a>
 		
 		
 	<!--Buttons for page six. If the button no is clicked then allergy will be counted in the total, but if yes is clicked, then cold it added to the final total. 
