@@ -38,20 +38,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-	//underneath are the definitions of the variables I am using that will be used for allergy and cold calculations, both will have a 0 starting value 
+	//Underneath are the definitions of the variables I am using that will be used for allergy and cold calculations, both will have a 0 starting value 
         var allergy_count = 0;
         var cold_count = 0;
 
-	//this is the function for ****
+	//This is the function to add 1 to the total value when the button for counting allergy sympotms is clicked.
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 
         }
-
+	
+	//This is the function to add 1 to the total value when the button for counting cold sympotms is clicked.
         function coldAdd(){
             cold_count = cold_count + 1;
         }
 
+
+	/*This function is to create the equations for the results and to get them displayed on the results page. It also defines the variables to form the equation,
+	which takes the amount of either the allergy value or cold value and divides it by 6 and multipies it by 100 to get the whole number percentage of what the 
+	person is likely to have */
 	function Results(){
 		var allergyPercent = (allergy_count/6)*100;
 		var coldPercent = (cold_count/6)*100;
@@ -65,6 +70,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <style>	
+
+//This area is used to create how the pages will be displayed
+	
 .body {
      margin: 0em;
 }
@@ -88,21 +96,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Allergies?</h1> 
+	<!--This is the header or title of page 1, the page before the questions-->
 </div>
 	
 <div id="content" class="w3-container">
 	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	<!-- This is the grey button that will take the viewer to the next page, when it is clicked-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-<div class="page" id="one">
+<!--This whole section is just the basic information about the website that is diplayed on the first page, before any questions-->
+	
+<div class="page" id="one"> <!--This is technically page one and will display question 1 -->
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
+		<!-- Title of page 1 -->
 	</div>
 	
     	<div id="content" class="w3-container">
@@ -113,12 +125,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> NO</a>
 		
-	<!--If the button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
-	Regardless of which is clicked, the website will go to page two. -->	
+	<!--Theses are the yes and no buttons. If button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
+	Regardless of which is clicked, the website will go to page two. Also, the class section is just to create how the buttons look, which are black. -->	
     	</div>
 </div>
 
-<div class="page" id="two">
+<div class="page" id="two"> <!-- This is considered page 2 and will diplay question 2 -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
 	</div>
@@ -131,11 +143,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> NO</a>
 
-	<!--Buttons for page two. If the button yes is clicked then cold will be counted in the total, but if no is clicked, then allergy it added to the final total. 
-	Regardless of which is clicked, the website will go to page three.-->	
+	<!--Buttons for page two. If button yes is clicked then cold will be counted in the total, but if no is clicked, then allergy it added to the final total. 
+	Regardless of which is clicked, the website will go to page three. Also, the class section is just to create how the buttons look, which are black.-->	
 	</div>
 
-<div class="page" id="three">
+<div class="page" id="three"> <!-- This is considered page 3 and will diplay question 3 -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -148,11 +160,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 								   
 	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> NO</a>
 		
-	<!--Buttons for page three. If the button yes is clicked then cold will be counted in the total, but if no is clicked, then allergy it added to the final total. 
-	Regardless of which is clicked, the website will go to page four.-->
+	<!--Buttons for page three. If button yes is clicked then cold will be counted in the total, but if no is clicked, then allergy it added to the final total. 
+	Regardless of which is clicked, the website will go to page four. Also, the class section is just to create how the buttons look, which are black.-->
 	</div>
 	
-<div class="page" id="four">
+<div class="page" id="four"> <!-- This is considered page 4 and will diplay question 4 -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -164,12 +176,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> YES</a>	
 	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black"> NO</a>
 		
-		
-	<!--Buttons for page four. If the button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
-	Regardless of which is clicked, the website will go to next page.-->
+	<!--Buttons for page four. If button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
+	Regardless of which is clicked, the website will go to next page. Also, the class section is just to create how the buttons look, which are black.-->
 	</div>
 	
-<div class="page" id="five">
+<div class="page" id="five"> <!-- This is considered page 5 and will diplay question 5 -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 5</h1>
 	</div>
@@ -183,10 +194,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		
 	<!--Buttons for page five. If the button yes is clicked then allergy will be counted in the total, but if no is clicked, then cold it added to the final total. 
-	Regardless of which is clicked, the website will go to next page.-->
+	Regardless of which is clicked, the website will go to next page. Also, the class section is just to create how the buttons look, which are black.-->
 	</div>
 	
-<div class="page" id="six">
+<div class="page" id="six"> <!-- This is considered page 6 and will diplay question 6 -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 6</h1>
 	</div>
@@ -200,31 +211,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 		
 	<!--Buttons for page six. If the button no is clicked then allergy will be counted in the total, but if yes is clicked, then cold it added to the final total. 
-	Regardless of which is clicked, the website will go to next page.-->
+	Regardless of which is clicked, the website will go to next page. Also, the class section is just to create how the buttons look, which are black.-->
 	</div>
 	
-<div class="page" id="seven">
+<div class="page" id="seven"> <!-- This is considered page 7 and will diplay results button -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
+		<!--Title of the page 8-->
 	</div>
 	
 	<div id="content" class="w3-container">
 
 			
 	<a href="#eight"  onclick="Results();" class="w3-btn w3-black"> Click here for results...</a>
+	<!-- This is the results button on page 7 that will direct the viewer to page 8 where there results will be displayed. The class section is there 
+	to create how the button looks, which is black.-->
 		
-		
-	<!--Button for page seven.-->
 	</div>
 
-<div class="page" id="eight">
+<div class="page" id="eight"> <!-- This is considered page 8 and will diplay the results -->
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your Results</h1>
+		<!-- Title of the final page, page 8.-->
 	</div>
 	
 	
 	<div id="Results()" class="w3-container">
-	
+	<!-- This will use the Results function equation  and variables from the script portion of the code to display the viewers results and give the 
+	percentages of allergy symptoms and/or cold symptoms they show, based on their survey answers.-->
 	
 	
 	</div>
@@ -233,7 +247,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+	<p>DIY!</p> 
+	<!-- This is what is displayed at the bottom of page 7, the results button page-->
 </footer>
 
 </body>
